@@ -1,0 +1,26 @@
+# Agent manifest so this skill can be loaded by non-Qoder agents.
+# The procedure itself lives in ../SKILL.md — this file only declares how to run it.
+name: make-knowledge-cards
+description: >-
+  Convert a pasted article or a local Markdown/TXT file into 5-8 knowledge
+  cards (title, core knowledge, explanation, example or self-test question).
+entrypoint: ../SKILL.md
+
+model:
+  default: gpt-5
+  # Any instruction-following model with file reading works; no tool-calling required.
+
+instructions: |
+  Load ../SKILL.md and follow its workflow verbatim. Hard rules are not optional:
+  every card must be traceable to the source text, one idea per card, no invented
+  examples, and never pad to reach five cards when the source supports fewer.
+
+tools:
+  # Read-only over the user-provided source file; nothing else is needed.
+  - read_file
+
+unsupported:
+  - web page fetching
+  - PDF input
+  - Anki export
+  - graphical interface

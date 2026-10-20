@@ -1,0 +1,7 @@
+# Notes on dropout (rough draft, taken from a reading group)
+
+Dropout is a regularization trick for neural nets. During training you randomly
+drop units. At test time you keep everything. It helps generalization. People
+say it is like ensembling many models. BatchNorm and dropout do not mix well.
+That's basically it. I think it also helps with co-adaptation but I forget the
+exact story.
