@@ -166,4 +166,4 @@ MIT，版权归 `Copyright (c) 2026 wujian` 所有，见根目录 `LICENSE`。
 
 ## 10. 状态
 
-本地开发与测试完成，仓库已在本地初始化（默认分支 `main`，含首个提交），尚无远端、未推送到 GitHub。
+本地开发与测试完成，已发布为公开仓库：https://github.com/Black-Star-m/article-to-knowledge-cards （默认分支 `main`）。
